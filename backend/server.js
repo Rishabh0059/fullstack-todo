@@ -8,7 +8,7 @@ require('dotenv').config()
 const app=express();
 const PORT=process.env.port || 5000
 
-app.use(express.json());
+
 app.use(cors(
   {
     origin:["https://fullstack-todo-frontend-eight.vercel.app"],
@@ -16,11 +16,9 @@ app.use(cors(
     credentials:true
   }
 ));
+app.use(express.json());
 
-mongoose
-.connect(process.env.MONGODB_URL)
-.then(()=>console.log("connection successfully"))
-.catch((err)=>console.log(err))
+mongoose.connect('mongodb+srv://Rishabh:rishabh1259@cluster0.zxqft.mongodb.net/ToDoApp?retryWrites=true&w=majority&appName=Cluster0')
 
 app.use(routes);
 
