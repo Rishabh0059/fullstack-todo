@@ -11,7 +11,7 @@ const PORT=process.env.port || 5000
 
 app.use(cors(
   {
-    origin:["https://fullstack-todo-frontend-eight.vercel.app"],
+    origin:"https://fullstack-todo-frontend-4q029f8tz-rishabhs-projects-9b2e457f.vercel.app",
     methods:["POST","GET"],
     credentials:true
   }
